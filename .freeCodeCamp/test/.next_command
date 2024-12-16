@@ -64,3 +64,6 @@ trap '__vsc_preexec_all "$_"' DEBUG
 __vsc_original_prompt_command=${PROMPT_COMMAND:-}
 touch salon.sh
 chmod +x salon.sh
+pg_dump -cC --inserts -U freecodecamp salon > salon.sql
+git init
+git add salon.sh salon.sql .
